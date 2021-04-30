@@ -13,7 +13,7 @@ router.route("/twitter-help").get((req, res) => {
 
 });
 
-router.route("login").git((req, res) =>{
+router.route("login").get((req, res) => {
 
   res.render("login.ejs");
 
