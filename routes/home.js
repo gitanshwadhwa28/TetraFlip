@@ -19,4 +19,10 @@ router.route("/login").get((req, res) => {
 
 });
 
+router.route("/register").get((req, res) => {
+
+  res.render("register.ejs");
+
+});
+
 module.exports = router;
