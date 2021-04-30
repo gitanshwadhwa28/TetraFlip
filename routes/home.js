@@ -7,4 +7,10 @@ router.route("/").get((req, res) => {
 
 });
 
+router.route("/twitter-help").get((req, res) => {
+
+  res.render("twitter.ejs");
+
+});
+
 module.exports = router;
