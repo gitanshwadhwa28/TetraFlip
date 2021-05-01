@@ -38,6 +38,21 @@ router.route("/fundraiser").get((req, res) => {
 
 });
 
+router.route("/user-r").get((req, res) => {
+
+  res.render("recepientAdmin/index.ejs");
+
+});
+
+router.route("/user-d").get((req, res) => {
+
+  res.render("donorAdmin/index.ejs");
+
+});
+
+
+
+
 // router.route("/register").get((req, res) => {
 
 //   res.render("register.ejs");
@@ -45,7 +60,7 @@ router.route("/fundraiser").get((req, res) => {
 // });
 router.post('/register-x', async (req, res) => {
 
-  let { fullname, age, email, phone, password, state } = req.body;
+  let { fullname, age, email, phone, password, state, check } = req.body;
 
   console.log(req.body)
   try {
@@ -73,11 +88,14 @@ router.post('/register-x', async (req, res) => {
 
         var password_hashed = bcrypt.hashSync(password, 10);
 
+        var role = 'r';
+        if (check) {
+          role = 'd';
+        }
 
 
-
-        sql = "insert into users(fullname, age, email ,phone, password, state) values(?,?,?,?,?,?)";
-        db.query(sql, [fullname, age, email, phone, password_hashed, state], (err, result) => {
+        sql = "insert into users(fullname, age, email ,phone, password, state, role) values(?,?,?,?,?,?,?)";
+        db.query(sql, [fullname, age, email, phone, password_hashed, state, role], (err, result) => {
           if (err) {
             res.render("register1.ejs", { status: 4 })
 
@@ -85,7 +103,11 @@ router.post('/register-x', async (req, res) => {
           }
           else {
             req.session.email = email;
-            res.render("dashboard.ejs", { email: req.session.email });
+            if (role == 'r') {
+              res.redirect("/user-r");
+            } else if (role == 'd') {
+              res.redirect("/user-d");
+            }
 
           }
 
@@ -142,7 +164,12 @@ router.route("/login-x").post((req, res) => {
       if (bcrypt.compareSync(password, result[0].password)) {
 
         req.session.email = result[0].email;
-        res.render("dashboard.ejs")
+
+        if (result[0].role == 'r') {
+          res.redirect("/user-r");
+        } else if (result[0].role == 'd') {
+          res.redirect("/user-d");
+        }
 
       } else {
         res.render("login.ejs", { status: 1 });
