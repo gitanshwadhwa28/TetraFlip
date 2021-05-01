@@ -156,3 +156,14 @@ $(".popup-button").click(function () {
     "slow"
   );
 });
+
+
+function donor() {
+  if (document.getElementById('check-1').checked) {
+    var headingDiv = document.getElementById("title");
+    headingDiv.innerHTML = "<h3 class='mb-4 text-center' style='font-weight: bolder;' id='title'>Register as a Donor</h3>";
+  } else {
+    var headingDiv = document.getElementById("title");
+    headingDiv.innerHTML = "<h3 class='mb-4 text-center' style='font-weight: bolder;' id='title'>Register as a Recepient</h3>";
+  }
+}
