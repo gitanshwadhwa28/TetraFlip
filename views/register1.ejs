@@ -22,6 +22,59 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
                     <div class="login-wrap p-0">
+                        <%
+                            if(status==1){
+                            %>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            All fields are required.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <%
+                            }else if(status==2){
+                            %>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            Password length must be greater than 5.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <%
+                                }else if(status==3){
+                                %>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            E-mail address already exists in the database.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <%
+                                    }else if(status==4){
+                                    %>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Server error. </strong> Please try again later.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <%
+                                        }else if(status==5){
+                                        %>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Server error. </strong> Please try again later.
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <%
+                                            }
+                                            %>
                         <h3 class="mb-4 text-center" style="font-weight: bolder;" id="title">Register as a Recepient
                         </h3>
                         <form action="/register-x" method="POST" class="signin-form">
@@ -107,6 +160,7 @@
                                 </div> -->
                             </div>
                         </form>
+
                         <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
                         <div class="social d-flex text-center">
                             <a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span>
