@@ -31,6 +31,13 @@ router.route("/donate").get((req, res) => {
   res.render("donate.ejs");
 
 });
+
+router.route("/fundraiser").get((req, res) => {
+
+  res.render("fundraiser.ejs");
+
+});
+
 // router.route("/register").get((req, res) => {
 
 //   res.render("register.ejs");
@@ -65,6 +72,8 @@ router.post('/register-x', async (req, res) => {
 
 
         var password_hashed = bcrypt.hashSync(password, 10);
+
+
 
 
         sql = "insert into users(fullname, age, email ,phone, password, state) values(?,?,?,?,?,?)";
