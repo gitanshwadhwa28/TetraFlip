@@ -46,16 +46,22 @@ router.post('/register-x', async (req, res) => {
   try {
 
     if (!fullname || !email || !password || !phone) {
-      res.render("/register-1k.ejs")
+      res.render("/register-1.ejs")
       return;
-    } else {
+    }
+    else if (password.length <= 5){
+      res.render("/register-1.ejs")
+    } 
+  
+    else {
       sql = "select * from users where email = '" + email + "'";
       db.query(sql, (err, result) => {
 
         if (result[0]) {
-          res.render("/register-1l.ejs")
+          res.render("/register-1.ejs")
           return;
         }
+
 
         var password_hashed = bcrypt.hashSync(password, 10);
 
@@ -81,7 +87,7 @@ router.post('/register-x', async (req, res) => {
 
   } catch (error) {
     console.log(error)
-    res.render("/register-1n.ejs");
+    res.render("/register-1.ejs");
     return;
   }
 
@@ -106,11 +112,11 @@ router.post('/login-x', (req, res) => {
         res.render("dashboard.ejs")
 
       } else {
-        res.render("loginx.ejs", { status: 1 });
+        res.render("login.ejs", { status: 1 });
       }
     }
     else
-      res.render("loginy.ejs", { status: 2 });
+      res.render("login.ejs", { status: 2 });
 
   });
 
