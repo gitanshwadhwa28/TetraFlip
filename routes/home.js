@@ -26,6 +26,11 @@ router.route("/register").get((req, res) => {
 
 });
 
+router.route("/donate").get((req, res) => {
+
+  res.render("donate.ejs");
+
+});
 // router.route("/register").get((req, res) => {
 
 //   res.render("register.ejs");
