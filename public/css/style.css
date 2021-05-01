@@ -486,3 +486,30 @@ nav button {
     display: none;
   }
 }
+
+.footer-size {
+  font-size: 14.5px;
+}
+.footer1 {
+  text-decoration: none !important;
+  font-size: 12px;
+  padding-left: 5.5px;
+  padding-right: 5.5px;
+}
+.footer2 {
+  text-decoration: none !important;
+  color: rgb(42,177,205);
+}
+.footer2:hover {
+  text-decoration: none !important;
+  color: black;
+}
+.footer3 {
+  color: white;
+}
+.footer3:hover {
+  color: white;
+}
+.social {
+  background: rgb(42,177,205);
+}
