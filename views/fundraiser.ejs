@@ -69,7 +69,7 @@
           
                     
           <br>
-          <div style="text-align: center; font-size: 3.5vw; font-weight: 600;">Rs. 1001</div>
+          <div style="text-align: center; font-size: 3.5vw; font-weight: 600;" id="tamount">01</div>
           <br>
           
           
@@ -78,8 +78,8 @@
             <div class="card-body">
                 <h5 class="card-title" style="font-weight: 200; font-size: 1.5vw; text-align: center;">Recent Donations</h5>
                 <div id="example2" class="container2">
-                    <ul class="list">
-                      <li class="item">Bhavy donated Rs. 1001</li>
+                    <ul class="list" id="list" style="padding-left: 20px;">
+                      <li class="item" id="li"></li>
                       
                     </ul>
                   </div>
@@ -111,10 +111,10 @@
               <div style="text-align: left;">
                 
 
-              <button type="button" class="btn btn-outline-primary">+5000 Rs</button>
-              <button type="button" class="btn btn-outline-primary">+10000 Rs</button>
-              <button type="button" class="btn btn-outline-primary">+500000 Rs</button>
-              <button type="button" class="btn btn-outline-primary">+1000000 Rs</button>
+              <button type="button" class="btn btn-outline-primary" onclick="D5000();">+5000 Rs</button>
+              <button type="button" class="btn btn-outline-primary" onclick="D10000();">+10000 Rs</button>
+              <button type="button" class="btn btn-outline-primary" onclick="D500000();">+500000 Rs</button>
+              <button type="button" class="btn btn-outline-primary" onclick="D1000000();">+1000000 Rs</button>
               </div>
               
               
@@ -131,7 +131,7 @@
               </div>
               <br>
               <div style="text-align: right;">
-                <button type="button" class="btn btn-danger">Donate Now</button>
+                <button type="button" class="btn btn-danger" onclick="donatenow();">Donate Now</button>
               </div>
               
             </div>
@@ -150,6 +150,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
   integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
   crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
   
   <!--/NAVBAR-->
 </body>
