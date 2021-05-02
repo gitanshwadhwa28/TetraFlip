@@ -13,7 +13,7 @@
 <body>
     <img src="./img/loginbg.jpg" alt="" id="bg">
     <section class="ftco-section">
-        <div class="container">
+        <div class="container" style="padding-right: 35%; padding-left: 35%;">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-5">
 
@@ -25,81 +25,80 @@
                         <%
                             if(status==1){
                             %>
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            All fields are required.
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                All fields are required.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                        </div>
+                            </div>
 
-                        <%
+                            <%
                             }else if(status==2){
                             %>
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            Password length must be greater than 5.
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    Password length must be greater than 5.
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                        </div>
+                                </div>
 
-                        <%
+                                <%
                                 }else if(status==3){
                                 %>
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            E-mail address already exists in the database.
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        E-mail address already exists in the database.
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                        </div>
+                                    </div>
 
-                        <%
+                                    <%
                                     }else if(status==4){
                                     %>
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <strong>Server error. </strong> Please try again later.
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                            <strong>Server error. </strong> Please try again later.
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                        </div>
+                                        </div>
 
-                        <%
+                                        <%
                                         }else if(status==5){
                                         %>
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <strong>Server error. </strong> Please try again later.
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                <strong>Server error. </strong> Please try again later.
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
-                        </div>
+                                            </div>
 
-                        <%
+                                            <%
                                             }
                                             %>
-                        <h3 class="mb-4 text-center" style="font-weight: bolder;" id="title">Register as a Recepient
-                        </h3>
-                        <form action="/register-x" method="POST" class="signin-form">
-                            <div class="form-group">
-                                <label>Full name</label>
-                                <input type="text" class="form-control" name="fullname" placeholder="Full name"
-                                    required>
-                            </div>
-                            <div class="form-group">
-                                <label>Age</label>
-                                <input type="text" class="form-control" name="age" placeholder="Age" required>
-                            </div>
-                            <div class="form-group">
-                                <label>E-mail</label>
-                                <input type="email" class="form-control" name="email" placeholder="E-mail" required>
+                                                <h3 class="mb-4 text-center" style="font-weight: bolder;" id="title">Register as a Recepient
+                                                </h3>
+                                                <form action="/register-x" method="POST" class="signin-form">
+                                                    <div class="form-group">
+                                                        <label>Full name</label>
+                                                        <input type="text" class="form-control" name="fullname" placeholder="Full name" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Age</label>
+                                                        <input type="text" class="form-control" name="age" placeholder="Age" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>E-mail</label>
+                                                        <input type="email" class="form-control" name="email" placeholder="E-mail" required>
 
-                            </div>
-                            <div class="form-group">
-                                <label>Phone</label>
-                                <input type="text" class="form-control" name="phone" placeholder="Phone" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Phone</label>
+                                                        <input type="text" class="form-control" name="phone" placeholder="Phone" required>
 
-                            </div>
-                            <div class="form-group">
-                                <label for="">State</label>
-                                <select id="border-x" name="state" class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="">State</label>
+                                                        <select id="border-x" name="state" class="form-control">
                                     <option value=""></option>
                                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                                     <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -138,36 +137,34 @@
                                     <option value="Uttarakhand">Uttarakhand</option>
                                     <option value="West Bengal">West Bengal</option>
                                 </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="">Password</label>
-                                <input id="password-field" name="password" type="password" class="form-control"
-                                    placeholder="Password" required>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" name="submit"
-                                    class="form-control btn btn-primary submit px-3">Sign up</button>
-                            </div>
-                            <div class="form-group d-md-flex">
-                                <div class="w-50">
-                                    <label class="checkbox-wrap checkbox-primary">Register as a donor
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="">Password</label>
+                                                        <input id="password-field" name="password" type="password" class="form-control" placeholder="Password" required>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <button type="submit" name="submit" class="form-control btn btn-primary submit px-3">Sign up</button>
+                                                    </div>
+                                                    <div class="form-group d-md-flex">
+                                                        <div class="w-50">
+                                                            <label class="checkbox-wrap checkbox-primary">Register as a donor
                                         <input id="check-1" name="check" type="checkbox" onclick="donor();">
                                         <span class="checkmark"></span>
                                     </label>
-                                </div>
-                                <!-- <div class="w-50 text-md-right">
+                                                        </div>
+                                                        <!-- <div class="w-50 text-md-right">
                                     <a href="#" style="color: #fff">Forgot Password</a>
                                 </div> -->
-                            </div>
-                        </form>
+                                                    </div>
+                                                </form>
 
-                        <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
-                        <div class="social d-flex text-center">
-                            <a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span>
+                                                <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
+                                                <div class="social d-flex text-center">
+                                                    <a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span>
                                 Google </a>
-                            <a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span>
+                                                    <a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span>
                                 Twitter </a>
-                        </div>
+                                                </div>
                     </div>
                 </div>
             </div>
