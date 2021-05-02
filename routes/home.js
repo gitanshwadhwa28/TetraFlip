@@ -50,6 +50,12 @@ router.route("/user-d").get((req, res) => {
 
 });
 
+router.route("/posts-r").get((req, res) => {
+
+  res.render("recepientAdmin/requests.ejs");
+
+});
+
 
 
 
