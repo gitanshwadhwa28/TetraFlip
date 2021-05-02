@@ -22,17 +22,18 @@
   <link rel="stylesheet" href="./css/fundraiser.css" />
   <title>Home | COVID FREE INDIA</title>
 </head>
-<body>
-    <!--NAVBAR-->
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+<body>
+  <!--NAVBAR-->
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="/"><img src="./img/logo.png" class="brand-logo" /></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
@@ -41,15 +42,15 @@
           <li class="nav-item active">
             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
           </li>
-  
+
           <li class="nav-item">
             <a class="nav-link" href="/about">About</a>
           </li>
-  
+
           <li class="nav-item">
             <a class="nav-link" href="/fundraiser">Fundraiser</a>
           </li>
-  
+
         </ul>
         <a href="/register"><button class="btn my-2 my-sm-0 contact-nav" type="submit">
             Join now
@@ -66,23 +67,23 @@
         <div>
           <div style="font-size: 3vw; text-align: center;">Funds Raised</div>
           <hr>
-          
-                    
+
+
           <br>
-          <h1 style="text-align: center; font-size: 3.5vw; font-weight: 600;" id="tamount">01</h1>
+          <h1 style="text-align: center; font-size: 3.5vw; font-weight: 600;" id="tamount">100</h1>
           <br>
-          
-          
+
+
           <hr>
           <div class="card">
             <div class="card-body">
-                <h5 class="card-title" style="font-weight: 200; font-size: 1.5vw; text-align: center;">Recent Donations</h5>
-                <div id="example2" class="container2">
-                    <ul class="list" id="list" style="padding-left: 20px;">
-                      <li class="item" id="li"></li>
-                      
-                    </ul>
-                  </div>
+              <h5 class="card-title" style="font-weight: 200; font-size: 1.5vw; text-align: center;">Recent Donations
+              </h5>
+              <div id="example2" class="container2">
+                <ul class="list" id="list" style="padding-left: 20px;">
+                  <li class="item" id="li"></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -92,48 +93,50 @@
           <div style="font-size: 3vw; text-align: center;">Donate Now!</div>
           <hr>
           <br>
-          
-          <div style="color: red; font-size: 1vw; margin-bottom: 30px;">NOTE: For trial purposes you can directly donate fake money from the website
-              <br>
-              <br>
-              <div style="font-weight: 600;">
+
+          <div style="color: red; font-size: 1vw; margin-bottom: 30px;">NOTE: For trial purposes you can directly donate
+            fake money from the website
+            <br>
+            <br>
+            <div style="font-weight: 600;">
               All transactions are secured by BLOCKCHAIN
-              </div>
+            </div>
           </div>
-          
+
           <hr>
-          
+
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; font-size: 1.5vw; text-align: left;">Quick Donate or Enter Amount</h5>
+              <h5 class="card-title" style="font-weight: bold; font-size: 1.5vw; text-align: left;">Quick Donate or
+                Enter Amount</h5>
               <br>
-              
-              <div style="text-align: left;">
-                
 
-              <button type="button" class="btn btn-outline-primary" onclick="D5000();">+5000 Rs</button>
-              <button type="button" class="btn btn-outline-primary" onclick="D10000();">+10000 Rs</button>
-              <button type="button" class="btn btn-outline-primary" onclick="D500000();">+500000 Rs</button>
-              <button type="button" class="btn btn-outline-primary" onclick="D1000000();">+1000000 Rs</button>
+              <div style="text-align: left;">
+
+
+                <button type="button" class="btn btn-outline-primary" onclick="D5000();">+5000 Rs</button>
+                <button type="button" class="btn btn-outline-primary" onclick="D10000();">+10000 Rs</button>
+                <button type="button" class="btn btn-outline-primary" onclick="D100000();">+100000 Rs</button>
+                <button type="button" class="btn btn-outline-primary" onclick="D500000();">+500000 Rs</button>
               </div>
-              
-              
+
+
               <div style="text-align: left;">
                 <div style="margin-bottom: 10px; margin-top: 15px; font-weight: 600;">
-                    Or
+                  Or
                 </div>
-                
-              <form action="">
+
+                <form action="">
                   <label for="amount">Enter Amount :</label>
-                  Rs.<input type="number" id="amount" name="amount" style="margin-left: 5px;">
-                  
-              </form>
+                  Rs.<input type="number" id="amountx" name="amountx" style="margin-left: 5px;">
+
+                </form>
               </div>
               <br>
               <div style="text-align: right;">
                 <button type="button" class="btn btn-danger" onclick="donatenow();">Donate Now</button>
               </div>
-              
+
             </div>
           </div>
         </div>
@@ -142,15 +145,15 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-  integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
-  crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-  integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-  crossorigin="anonymous"></script>
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous"></script>
   <script src="./js/fund.js"></script>
-  
+
   <!--/NAVBAR-->
 </body>
