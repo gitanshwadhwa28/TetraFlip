@@ -1,10 +1,16 @@
 
 function D5000() {
+    var prevs = document.getElementById("tamount");
+    var prev = prevs.innerHTML;
+    console.log(prev);
+    var prevint = parseInt(prev);
+    var previntnew = prevint;
+    var prevstr = toString(previntnew);
     var amount = document.getElementById("tamount")
-    amount.innerHTML = "<div style='text-align: center; font-size: 3.5vw; font-weight: 600;' id='tamount'>Rs. 5000</div>";
+    amount.innerHTML = "<div style='text-align: center; font-size: 3.5vw; font-weight: 600;' id='tamount'>5000</div>";
     var ul = document.getElementById("list");
     var li = document.createElement("li");
-    li.appendChild(document.createTextNode("You donated Rs. 5000"));
+    li.appendChild(document.createTextNode(prevstr));
     ul.appendChild(li);
   }
   function D10000() {
@@ -25,7 +31,7 @@ function D5000() {
   }
   function D1000000() {
     var amount = document.getElementById("tamount")
-    amount.innerHTML = "<div style='text-align: center; font-size: 3.5vw; font-weight: 600;' id='tamount'>Rs. 1000000</div>";
+    amount.innerHTML = "<h1 style='text-align: center; font-size: 3.5vw; font-weight: 600;' id='tamount'>Rs. 1000000</h1>";
     var ul = document.getElementById("list");
     var li = document.createElement("li");
     li.appendChild(document.createTextNode("You donated Rs. 1000000"));
